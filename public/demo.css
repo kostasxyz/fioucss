@@ -1,0 +1,38 @@
+body {
+  color: #464152;
+  font-family: 'Raleway', sans-serif;
+}
+
+#app {
+  min-height: 100vh;
+  padding: 0 0 10rem;
+}
+
+.section {
+  margin-bottom: 12rem;
+}
+
+.level-section .f_level {
+  border: 1px solid #eee;
+  padding: 1rem 1.5rem;
+}
+
+.tag {
+  color: #aa8aec;
+  font-weight: 600;
+}
+
+.col-inner {
+  padding: 1rem 1.25rem;
+  background-color: #e6def7;
+}
+
+
+.subsection {
+  margin: 2.5rem auto;
+}
+
+.subsection-inner {
+  padding: 1rem 1.25rem;
+  background-color: #e6def7;
+}

@@ -1,0 +1,40 @@
+/*
+  Medium screens query
+------------------------------------------------*/
+// For large screens
+@media all and (min-width: #{$mq-md}) and (max-width: #{$mq-lg - 1}) {
+  .f_container {
+    width: 100%;
+    max-width: #{$mq-md - strip-unit($gap*20)};
+    margin: 0 auto;
+  }
+
+  .f_row, .f_flex {
+    flex-direction: row;
+  }
+
+  @for $i from 1 through (100/5) {
+    $w: $i * 5;
+
+    .f_col {
+      flex: 0;
+    }
+
+    .f_col-#{$w}\@md {
+      flex: 0 0 $w+0%;
+      width: $w+0%;
+    }
+
+    .f_col-push-#{$w}\@md {
+      margin-left: $w+0%;
+    }
+  }
+
+  .f_col-1-3\@md  {
+    width: decimal-floor(100 / 3, 4)+0%;
+  }
+
+  .f_col-2-3\@md  {
+    width: decimal-floor((100 / 3) * 2, 4)+0%;
+  }
+}

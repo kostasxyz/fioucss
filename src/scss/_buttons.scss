@@ -1,0 +1,65 @@
+.f_btn {
+  display: inline-block;
+  padding: .8rem 2.8rem;
+  border: $border-radius solid $color-gray;
+  color: luminosity-color($color-gray);
+  background-color: $color-gray;
+  border-radius: $border-radius;
+
+  &:hover {
+    background-color: darken($color-gray, 8%);
+    border-color: darken($color-gray, 8%);
+  }
+
+  &.f_btn-outline {
+    background-color: transparent;
+    color: $color-gray;
+
+    &:hover {
+      background-color: $color-gray;
+      color: luminosity-color($color-gray);
+      border-color: $color-gray;
+    }
+  }
+
+  &.f_btn-link {
+    display: inline;
+    background-color: transparent;
+    border-color: transparent;
+    color: $link-color;
+    padding: 0;
+
+    &:hover {
+      color: $link-hover-color;
+    }
+  }
+
+  @include transition;
+}
+
+@each $n, $color in $colors {
+  .f_btn {
+    &.f_btn-#{$n} {
+      background-color: $color;
+      color: luminosity-color($color);
+      border-color: $color;
+
+      &:hover {
+        background-color: darken($color, 8%);
+        border-color: darken($color, 8%);
+      }
+    }
+
+    &.f_btn-#{$n}-outline {
+      background-color: transparent;
+      color: luminosity-outline-color($color);
+      border-color: $color;
+
+      &:hover {
+        background-color: $color;
+        border-color: $color;
+        color: luminosity-color($color);
+      }
+    }
+  }
+}

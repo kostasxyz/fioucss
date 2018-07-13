@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Fiou css</title>
+  <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,600" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="fiou.css">
+  <link rel="stylesheet" type="text/css" href="demo.css">
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div class="f_container">
+        <h1>Fioucss</h1>
+    </div>
+
+    <div id="app">
+        <!-- Grid -->
+        <section class="section grid-section">
+            <div class="f_container">
+                <hr />
+                <h3><span class="tag">#</span>Grid</h3>
+                <p>
+                    Grid widths are assignd by intervals of 5 ( 5%, 20% 35%) and 1-3 ( 1 third = 33.3333%) and 2-3 (2 thirds = 66.6666%).
+                    <br>
+                    There is only one media query max-width: 1199px and min-width: 1200px. Basicaly all screens below 1200 are considered small screens.
+                    <br>
+                    All columns are 100% size below 1200px. You can add the .f_row-sm and .f_flex-sm with @sm in the f_col-* class (f_col-50@sm)
+                    to have mobile columns.
+                </p>
+                <hr />
+            </div>
+
+            <div class="section-demo">
+                <div class="subsection">
+                    <div class="f_container">
+                        <div class="f_row">
+                            <div v-for="i in 3" :key="'grid-1'+i" class="f_col f_col-33">
+                                <div class="col-inner">.f_col .f_col-33</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="subsection">
+                    <div class="f_container">
+                        <div class="f_row">
+                            <div v-for="i in 4" :key="'grid-2'+i" class="f_col f_col-25">
+                                <div class="col-inner">.f_col .f_col-25</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="subsection">
+                    <div class="f_container">
+                        <div class="f_row">
+                            <div v-for="i in 5" :key="'grid-2'+i" class="f_col f_col-20">
+                                <div class="col-inner">.f_col .f_col-25</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="subsection">
+                    <div class="f_container">
+                        <div class="f_row">
+                            <div class="f_col f_col-15">
+                                <div class="col-inner">.f_col .f_col-15</div>
+                            </div>
+                            <div class="f_col f_col-20">
+                                <div class="col-inner">.f_col .f_col-20</div>
+                            </div>
+                            <div class="f_col f_col-35">
+                                <div class="col-inner">.f_col .f_col-35</div>
+                            </div>
+                            <div class="f_col f_col-30">
+                                <div class="col-inner">.f_col .f_col-30</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="subsection">
+                    <div class="f_container">
+                        <div class="f_row">
+                            <div class="f_col f_col-35">
+                                <div class="col-inner">.f_col .f_col-35</div>
+                            </div>
+                            <div class="f_col f_col-65">
+                                <div class="col-inner">.f_col .f_col-65</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="subsection">
+                    <div class="f_container">
+                        <div class="f_row">
+                            <div class="f_col f_col-80">
+                                <div class="col-inner">.f_col .f_col-80</div>
+                            </div>
+                            <div class="f_col f_col-20">
+                                <div class="col-inner">.f_col .f_col-20</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-demo">
+                <div class="subsection">
+                    <div class="f_container">
+                        <h4>Mobile grid columns</h4>
+
+                        <div class="f_row f_row-sm">
+                            <div v-for="i in 3" :key="'grid-1'+i" class="f_col f_col-30 f_col-1-3@sm">
+                                <div class="col-inner">.f_col .f_col-1-3@sm</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="subsection">
+                    <div class="f_container">
+                        <div class="f_row f_row-sm">
+                            <div v-for="i in 4" :key="'grid-2'+i" class="f_col f_col-20 f_col-25@sm f_col-15@md">
+                                <div class="col-inner">.f_col .f_col-25@sm</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Level -->
+        <section class="section level-section">
+            <div class="f_container">
+                <hr />
+                <h3><span class="tag">#</span>Level</h3>
+                <p>
+                    The level component is just a simple flex container that makes easy to create a nav menu, a toolbar etc.
+                    <br>
+                    It has a left item, a right item to easily align logos, action buttons etc.
+                </p>
+                <hr />
+            </div>
+
+            <div class="subsection">
+                <div class="f_container">
+                    <div class="f_level">
+                        <div class="f_level-item-left">
+                            <p><a href='#' onclick='return false;'>FIOUCSS LOGO</a></p>
+                        </div>
+                        <div class="f_level-item">
+                            <p>FIOUCSS LEVEL</p>
+                        </div>
+                        <div class="f_level-item-left">
+                            <p>
+                                <a class="f_btn f_btn-link" href='#' onclick='return false;'>&bull; Profile</a>
+                                <a class="f_btn f_btn-link" href='#' onclick='return false;'>&bull; Logout</a>
+                                <a class="f_btn f_btn-success" href='#' onclick='return false;'>Download FiouCss</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Typo -->
+        <section class="section type-section">
+            <div class="f_container">
+                <hr />
+                <h3><span class="tag">#</span>Typography</h3>
+                <hr />
+            </div>
+
+            <div class="f_container">
+                <div class="section-demo">
+                    <h1>H1 Heading</h1>
+                    <p>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                    </p>
+                    <h2>H2 Heading</h2>
+                    <p>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                    </p>
+                    <h3>H3 Heading</h3>
+                    <p>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                    </p>
+                    <h4>H4 Heading</h4>
+                    <p>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                    </p>
+                    <h5>H5 Heading</h5>
+                    <p>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                    </p>
+                    <h6>H6 Heading</h6>
+                    <p>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                    </p>
+                    <pre>
+                        <code>
+                            .f_container {
+                              background-color: red;
+                            }
+                        </code>
+                    </pre>
+                </div>
+            </div>
+        </section>
+
+        <!-- Buttons -->
+        <section class="section buttons-section">
+            <div class="f_container">
+                <hr />
+                <h3><span class="tag">#</span>Buttons</h3>
+                <p>
+                    Button colors are defined in the _variables.scss.
+                    <br>
+                    You can copy this file to your app scss and modify colors, spacing, border-radius etc.
+                </p>
+                <hr />
+            </div>
+
+            <div class="subsection">
+                <div class="f_container">
+                    <div class="f_row f_flex-wrap">
+                        <div class="f_col f_col-25">
+                            <p><a class="f_btn" href='#' onclick='return false;'>.f_btn</a></p>
+                            <p><a class="f_btn f_btn-outline" href='#' onclick='return false;'>.f_btn</a></p>
+                        </div>
+                        <div v-for="(btn, i) in buttons" class="f_col f_col-25">
+                            <p>
+                                <a class="f_btn" :class="'f_btn-'+btn" href='#' onclick='return false;'>
+                                    + .f_btn-{{ btn }}
+                                </a>
+                            </p>
+                            <p>
+                                <a class="f_btn" :class="'f_btn-'+btn+' f_btn-'+btn+'-outline'" href='#' onclick='return false;'>
+                                    + .f_btn-{{ btn }}-outline
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Form -->
+        <section class="section form-section">
+            <div class="f_container">
+                <hr />
+                <h3><span class="tag">#</span>Form</h3>
+                <hr />
+            </div>
+
+            <div class="subsection">
+                <div class="f_container">
+                    <form class="f_form">
+                        <div class="f_row">
+                            <div class="f_col f_col-50">
+                                <div class="f_field">
+                                    <label for="first_name">First name</label>
+                                    <input type="text" placeholder="First name" id="first_name">
+                                </div>
+                            </div>
+
+                            <div class="f_col f_col-50">
+                                <div class="f_field">
+                                    <label for="last_name">Last name</label>
+                                    <input type="text" placeholder="Last name" id="last_name">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="f_row">
+                            <div class="f_col f_col-65">
+                                <div class="f_field">
+                                    <label for="email">Your email</label>
+                                    <input type="email" placeholder="email@email.com" id="email">
+                                </div>
+                            </div>
+
+                            <div class="f_col f_col-35">
+                                <div class="f_field">
+                                    <label for="country">Country</label>
+                                    <select id="country">
+                                        <option value="Greece">Greece</option>
+                                        <option value="Cyprus">Cyprus</option>
+                                        <option value="France">France</option>
+                                        <option value="Spain">Spain</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="f_field">
+                            <label for="message">Message</label>
+                            <textarea class="u-full-width" placeholder="Hi Fioucss …" id="message"></textarea>
+                        </div>
+
+                        <div class="f_row">
+                            <div class="f_col f_col-50">
+                                <div class="f_field">
+                                    <label>
+                                        <input type="radio" name="option[]">
+                                        <span class="f_label">Option 1</span>
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="option[]">
+                                        <span class="f_label">Option 2</span>
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="option[]">
+                                        <span class="f_label">Option 3</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="f_col f_col-50">
+                                <div class="f_field">
+                                    <label for="coupon">Coupon code</label>
+                                    <input type="text" placeholder="#12345" id="coupon">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="f_field">
+                            <label>
+                                <input type="checkbox">
+                                <span class="f_label">Agree to terms &amp; conditions</span>
+                            </label>
+                        </div>
+
+                        <div class="f_field">
+                            <input class="f_btn f_btn-info" type="submit" value="Submit">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- List -->
+        <section class="section list-section">
+            <div class="f_container">
+                <hr />
+                <h3><span class="tag">#</span>Lists</h3>
+                <hr />
+            </div>
+
+            <div class="subsection">
+                <div class="f_container">
+                    <div class="f_row">
+                        <div class="f_col f_col-33">
+                            <h5>UL</h5>
+                            <ul>
+                              <li>Item 1</li>
+                              <li>
+                                Item 2
+                                <ul>
+                                  <li>Item 2.1</li>
+                                  <li>Item 2.2</li>
+                                </ul>
+                              </li>
+                              <li>Item 3</li>
+                            </ul>
+                        </div>
+
+                        <div class="f_col f_col-33">
+                            <h5>OL</h5>
+                            <ol>
+                              <li>Item 1</li>
+                              <li>
+                                Item 2
+                                <ul>
+                                  <li>Item 2.1</li>
+                                  <li>Item 2.2</li>
+                                </ul>
+                              </li>
+                              <li>Item 3</li>
+                            </ol>
+                        </div>
+
+                        <div class="f_col f_col-33">
+                            <h5>UL.f_list-unstyled</h5>
+                            <ul class="f_list-unstyled">
+                              <li>Item 1</li>
+                              <li>
+                                Item 2
+                                <ul>
+                                  <li>Item 2.1</li>
+                                  <li>Item 2.2</li>
+                                </ul>
+                              </li>
+                              <li>Item 3</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Table -->
+        <section class="section list-section">
+            <div class="f_container">
+                <div class="f_container">
+                    <hr />
+                    <h3><span class="tag">#</span>Table</h3>
+                    <hr />
+                </div>
+
+                <div class="f_table-wrap">
+                    <table class="f_table">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Age</th>
+                                <th>Sex</th>
+                                <th>Location</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Dave Gamache</td>
+                                <td>26</td>
+                                <td>Male</td>
+                                <td>San Francisco</td>
+                            </tr>
+                            <tr>
+                                <td>Dwayne Johnson</td>
+                                <td>42</td>
+                                <td>Male</td>
+                                <td>Hayward</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="demo.js"></script>
+</body>
+</html>
