@@ -7,7 +7,7 @@ $headings-font-family: $font-family !default;
 $gap: 1.25rem !default;
 $base-font: 1.6rem !default;
 $base-line-height: 1.45 !default;
-$border-radius: .1rem !default;
+$border-radius: 0.25rem !default;
 
 /* Modular typography ratios
 -------------------------------------------*/
@@ -26,36 +26,38 @@ $mq-lg: 1200px !default;
 
 /* Colors
 -------------------------------------------*/
-$color-red: #DB3A34 !default;
-$color-green: #14F0A7 !default;
-$color-blue: #26A7F2 !default;
-$color-orange: #FF8811 !default;
-$color-dark: #262626 !default;
-$color-light: #FFF8F0 !default;
+$color-primary: #58355E !default;
+$color-secondary: #177E89 !default;
+$color-tertiary: #7044ff !default;
+$color-info: #3880ff !default;
+$color-success: #10dc60 !default;
+$color-warning: #FF8811 !default;
+$color-danger: #DB3A34 !default;
+$color-dark: #222428 !default;
+$color-gray: #989aa2 !default;
+$color-light: #f4f5f8 !default;
 
-$color-gray: #a2a2a2 !default;
 $color-black: #323031 !default;
 $color-white: #fff !default;
 
-$color-body: #323031 !default;
-
-$color-main: #177E89 !default;
-$color-cta: #58355E !default;
+$color-body: $color-dark !default;
 
 $link-color: #306BAC !default;
 $link-hover-color: #141B41 !default;
-$heading-color: $color-body !default;
+
+$heading-color: $color-black !default;
 
 // Color list
 // used for buttons and other color helpers
 $colors: (
-    main: $color-main,
-    cta: $color-cta,
+    primary: $color-primary,
+    secondary: $color-secondary,
+    tertiary: $color-tertiary,
+    info: $color-info,
+    success: $color-success,
+    warning: $color-warning,
+    danger: $color-danger,
     dark: $color-dark,
-    light: $color-light,
     gray: $color-gray,
-    info: $color-blue,
-    success: $color-green,
-    warning: $color-orange,
-    danger: $color-red
+    light: $color-light
 ) !default;

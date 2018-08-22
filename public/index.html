@@ -23,7 +23,9 @@
                     <br>
                     There is only one media query max-width: 1199px and min-width: 1200px. Basicaly all screens below 1200 are considered small screens.
                     <br>
-                    All columns are 100% size below 1200px. You can add the .f_row-sm and .f_flex-sm with @sm in the f_col-* class (f_col-50@sm)
+                    All columns are 100% size below 1200px.
+                    <br>
+                    You can add @sm in the f_col-* class (f_col-50@sm)
                     to have mobile columns.
                 </p>
                 <hr />
@@ -33,8 +35,14 @@
                 <div class="subsection">
                     <div class="f_container">
                         <div class="f_row">
-                            <div v-for="i in 3" :key="'grid-1'+i" class="f_col f_col-33">
-                                <div class="col-inner">.f_col .f_col-33</div>
+                            <div class="f_col">
+                                <div class="col-inner">.f_col</div>
+                            </div>
+                            <div class="f_col">
+                                <div class="col-inner">.f_col</div>
+                            </div>
+                            <div class="f_col">
+                                <div class="col-inner">.f_col</div>
                             </div>
                         </div>
                     </div>
@@ -43,8 +51,8 @@
                 <div class="subsection">
                     <div class="f_container">
                         <div class="f_row">
-                            <div v-for="i in 4" :key="'grid-2'+i" class="f_col f_col-25">
-                                <div class="col-inner">.f_col .f_col-25</div>
+                            <div v-for="i in 3" :key="'grid-1'+i" class="f_col-1of3">
+                                <div class="col-inner">.f_col-1of3</div>
                             </div>
                         </div>
                     </div>
@@ -53,8 +61,8 @@
                 <div class="subsection">
                     <div class="f_container">
                         <div class="f_row">
-                            <div v-for="i in 5" :key="'grid-2'+i" class="f_col f_col-20">
-                                <div class="col-inner">.f_col .f_col-25</div>
+                            <div v-for="i in 4" :key="'grid-2'+i" class="f_col-25">
+                                <div class="col-inner">.f_col-25</div>
                             </div>
                         </div>
                     </div>
@@ -63,17 +71,27 @@
                 <div class="subsection">
                     <div class="f_container">
                         <div class="f_row">
-                            <div class="f_col f_col-15">
-                                <div class="col-inner">.f_col .f_col-15</div>
+                            <div v-for="i in 5" :key="'grid-2'+i" class="f_col-20">
+                                <div class="col-inner">.f_col-20</div>
                             </div>
-                            <div class="f_col f_col-20">
-                                <div class="col-inner">.f_col .f_col-20</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="subsection">
+                    <div class="f_container">
+                        <div class="f_row f_flex-wrap">
+                            <div class="f_col-15">
+                                <div class="col-inner">.f_col-15xx</div>
                             </div>
-                            <div class="f_col f_col-35">
-                                <div class="col-inner">.f_col .f_col-35</div>
+                            <div class="f_col-20">
+                                <div class="col-inner">.f_col-20</div>
                             </div>
-                            <div class="f_col f_col-30">
-                                <div class="col-inner">.f_col .f_col-30</div>
+                            <div class="f_col-35">
+                                <div class="col-inner">.f_col-35</div>
+                            </div>
+                            <div class="f_col-30">
+                                <div class="col-inner">.f_col-30</div>
                             </div>
                         </div>
                     </div>
@@ -82,11 +100,11 @@
                 <div class="subsection">
                     <div class="f_container">
                         <div class="f_row">
-                            <div class="f_col f_col-35">
-                                <div class="col-inner">.f_col .f_col-35</div>
+                            <div class="f_col-35">
+                                <div class="col-inner">.f_col-35</div>
                             </div>
-                            <div class="f_col f_col-65">
-                                <div class="col-inner">.f_col .f_col-65</div>
+                            <div class="f_col-65">
+                                <div class="col-inner">.f_col-65</div>
                             </div>
                         </div>
                     </div>
@@ -95,11 +113,11 @@
                 <div class="subsection">
                     <div class="f_container">
                         <div class="f_row">
-                            <div class="f_col f_col-80">
-                                <div class="col-inner">.f_col .f_col-80</div>
+                            <div class="f_col-80">
+                                <div class="col-inner">.f_col-80</div>
                             </div>
-                            <div class="f_col f_col-20">
-                                <div class="col-inner">.f_col .f_col-20</div>
+                            <div class="f_col-20">
+                                <div class="col-inner">.f_col-20</div>
                             </div>
                         </div>
                     </div>
@@ -111,9 +129,12 @@
                     <div class="f_container">
                         <h4>Mobile grid columns</h4>
 
-                        <div class="f_row f_row-sm">
-                            <div v-for="i in 3" :key="'grid-1'+i" class="f_col f_col-30 f_col-1-3@sm">
-                                <div class="col-inner">.f_col .f_col-1-3@sm</div>
+                        <div class="f_row f_align-stretch">
+                            <div v-for="i in 3" :key="'grid-1'+i" class="f_col-30 f_col-1of3@xs">
+                                <div class="col-inner">.f_col-30 <br> .f_col-1of3@xs</div>
+                            </div>
+                            <div class="f_col-10 f_col-50@xs">
+                                <div class="col-inner">.f_col-10 <br> 50@xs</div>
                             </div>
                         </div>
                     </div>
@@ -121,9 +142,9 @@
 
                 <div class="subsection">
                     <div class="f_container">
-                        <div class="f_row f_row-sm">
-                            <div v-for="i in 4" :key="'grid-2'+i" class="f_col f_col-20 f_col-25@sm f_col-15@md">
-                                <div class="col-inner">.f_col .f_col-25@sm</div>
+                        <div class="f_row">
+                            <div v-for="i in 5" :key="'grid-2'+i" class="f_col-20 f_col-25@xs">
+                                <div class="col-inner">.f_col-20 .f_col-25@sm</div>
                             </div>
                         </div>
                     </div>

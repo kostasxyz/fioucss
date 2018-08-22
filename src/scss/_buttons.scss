@@ -1,14 +1,14 @@
 .f_btn {
   display: inline-block;
   padding: .8rem 2.8rem;
-  border: $border-radius solid $color-gray;
-  color: luminosity-color($color-gray);
+  border: .1rem solid $color-gray;
+  color: contrasting-color($color-gray, $color-light, $color-dark);
   background-color: $color-gray;
   border-radius: $border-radius;
 
   &:hover {
-    background-color: darken($color-gray, 8%);
-    border-color: darken($color-gray, 8%);
+    background-color: darken($color-gray, 12%);
+    border-color: darken($color-gray, 12%);
   }
 
   &.f_btn-outline {
@@ -17,7 +17,7 @@
 
     &:hover {
       background-color: $color-gray;
-      color: luminosity-color($color-gray);
+      color: contrasting-color($color-gray, $color-light, $color-dark);
       border-color: $color-gray;
     }
   }
@@ -41,7 +41,7 @@
   .f_btn {
     &.f_btn-#{$n} {
       background-color: $color;
-      color: luminosity-color($color);
+      color: contrasting-color($color, $color-light, $color-dark);
       border-color: $color;
 
       &:hover {
@@ -58,7 +58,7 @@
       &:hover {
         background-color: $color;
         border-color: $color;
-        color: luminosity-color($color);
+        color: contrasting-color($color, $color-light, $color-dark);
       }
     }
   }

@@ -3,8 +3,8 @@ var app = new Vue({
 
   data: {
     buttons: [
-      'main', 'cta', 'dark', 'light', 'gray',
-      'info', 'success', 'warning', 'danger',
+      'primary', 'secondary', 'tertiary', 'info', 'success',
+      'warning', 'danger', 'dark', 'gray', 'light'
     ],
   }
 });

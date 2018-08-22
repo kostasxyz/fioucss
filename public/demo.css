@@ -25,6 +25,10 @@ body {
 .col-inner {
   padding: 1rem 1.25rem;
   background-color: #e6def7;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  height: 100%;
 }
 
 

@@ -1,13 +1,13 @@
 {
   "name": "fioucss",
-  "version": "1.0.9",
+  "version": "1.0.8",
   "description": "A micro css framework",
   "main": "dist/fiou.css",
   "sass": "src/scss/fiou.scss",
   "style": "dist/fiou.css",
   "repository": {
     "type": "git",
-    "url": "https://github.com/skapator/fioucss.git"
+    "url": "git+https://skapator@bitbucket.org/noveldigital/fioucss.git"
   },
   "scripts": {
     "build": "cross-env NODE_ENV=production gulp build",
@@ -23,7 +23,7 @@
   "license": "ISC",
   "devDependencies": {
     "cross-env": "^5.2.0",
-    "gulp": "^4.0.0",
+    "gulp": "^3.9.1",
     "gulp-autoprefixer": "^5.0.0",
     "gulp-clean-css": "^3.9.4",
     "gulp-connect": "^5.5.0",
