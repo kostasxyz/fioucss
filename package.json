@@ -1,6 +1,6 @@
 {
   "name": "fioucss",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "A micro css framework",
   "main": "dist/fiou.css",
   "sass": "src/scss/fiou.scss",
