@@ -1,13 +1,13 @@
 {
   "name": "fioucss",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "description": "A micro css framework",
   "main": "dist/fiou.css",
   "sass": "src/scss/fiou.scss",
   "style": "dist/fiou.css",
   "repository": {
     "type": "git",
-    "url": "git+https://skapator@bitbucket.org/noveldigital/fioucss.git"
+    "url": "git+https://github.com/skapator/fioucss.git"
   },
   "scripts": {
     "build": "cross-env NODE_ENV=production gulp build",
