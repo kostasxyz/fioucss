@@ -253,12 +253,12 @@
                         </div>
                         <div v-for="(btn, i) in buttons" class="f_col f_col-25">
                             <p>
-                                <a class="f_btn" :class="'f_btn-'+btn" href='#' onclick='return false;'>
+                                <a class="f_btn" :class="'f_hover-pulse f_z-depth-2 f_btn-'+btn" href='#' onclick='return false;'>
                                     + .f_btn-{{ btn }}
                                 </a>
                             </p>
                             <p>
-                                <a class="f_btn" :class="'f_btn-'+btn+' f_btn-'+btn+'-outline'" href='#' onclick='return false;'>
+                                <a class="f_btn" :class="'f_z-depth-2 f_btn-'+btn+' f_btn-'+btn+'-outline'" href='#' onclick='return false;'>
                                     + .f_btn-{{ btn }}-outline
                                 </a>
                             </p>

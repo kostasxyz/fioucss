@@ -5,6 +5,8 @@
   color: contrasting-color($color-gray, $color-light, $color-dark);
   background-color: $color-gray;
   border-radius: $border-radius;
+  position: relative;
+  @include f_trans;
 
   &:hover {
     background-color: darken($color-gray, 12%);
@@ -34,7 +36,7 @@
     }
   }
 
-  @include transition;
+  @include f_trans;
 }
 
 @each $n, $color in $colors {
@@ -47,6 +49,10 @@
       &:hover {
         background-color: darken($color, 8%);
         border-color: darken($color, 8%);
+      }
+
+      &.f_hover-pulse:hover {
+        @include f_pulse;
       }
     }
 

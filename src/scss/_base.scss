@@ -16,7 +16,7 @@ html {
 a {
   text-decoration: none;
   color: $link-color;
-  @include transition;
+  @include f_trans;
 }
 
 a:hover {
@@ -47,14 +47,10 @@ img.f_img-fluid {
   width: 100%;
 }
 
-.f_cf {
+.f_cfix {
   content: "";
   display: table;
   clear: both;
-}
-
-.f_col-sm-center {
-  text-align: center;
 }
 
 /* Lists

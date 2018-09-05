@@ -1,3 +1,6 @@
+/* Typography
+-------------------------------------------*/
+
 // html is set to 62.5% so that all the REM measurements are based on 10px sizing.
 // So 1.5rem = 15px
 html {
@@ -8,10 +11,8 @@ body {
   font-size: $base-font;
   line-height: $base-line-height;
   font-weight: normal;
-
-  @if $font-family {
-     font-family: $font-family;
-  }
+  color: $body-color;
+  font-family: $font-family;
 }
 
 p {
@@ -23,10 +24,11 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0 0 #{decimal-floor($ratio / 3, 3)}rem 0;
   font-weight: inherit;
   line-height: $base-line-height;
+  font-family: $headings-font-family;
+}
 
-  @if $headings-font-family {
-     font-family: $headings-font-family;
-  }
+h1, h2, h3, h4 {
+  color: $headings-color;
 }
 
 @for $i from 1 through 4 {
@@ -38,6 +40,6 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
-h5, h6, f_h5 {
+h5, h6, .f_h5, .f_h6 {
   font-size: $base-font;
 }

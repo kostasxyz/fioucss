@@ -1,3 +1,5 @@
+/* Text align
+-------------------------------------------*/
 .f_text-center {
   text-align: center;
 }
@@ -14,7 +16,20 @@
   display: block;
 }
 
+.f_hide {
+  display: none;
+}
 
+.f_opac-0 {
+  opacity: 0;
+}
+
+.f_opac-1 {
+  opacity: 1;
+}
+
+/* Color and bg
+-------------------------------------------*/
 @each $n, $color in $colors {
     .f_color-#{$n} {
       color: $color;
@@ -39,4 +54,147 @@
     .f_bg-#{$n}-tint {
       background-color: get-color-tint($color);
     }
+}
+
+/* Spacing
+-------------------------------------------*/
+
+@for $i from 1 through 100 {
+  $w: $i * .25;
+
+  .f_pt-#{$w} {
+    padding-top: $w+rem;
+  }
+  .f_pb-#{$w} {
+    padding-bottom: $w+rem;
+  }
+  .f_pl-#{$w} {
+    padding-left: $w+rem;
+  }
+  .f_pr-#{$w} {
+    padding-right: $w+rem;
+  }
+
+  .f_mt-#{$w} {
+    margin-top: $w+rem;
+  }
+  .f_mb-#{$w} {
+    margin-bottom: $w+rem;
+  }
+  .f_ml-#{$w} {
+    margin-left: $w+rem;
+  }
+  .f_mr-#{$w} {
+    margin-right: $w+rem;
+  }
+}
+
+.f_no-padding {
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.f_no-margin {
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.f_no-space {
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/* Font size / weight
+-------------------------------------------*/
+.f_font-300 {
+  font-weight: 300;
+}
+
+.f_font-400 {
+  font-weight: 400;
+}
+
+.f_font-500 {
+  font-weight: 500;
+}
+
+.f_font-600 {
+  font-weight: 600;
+}
+
+.f_font-700 {
+  font-weight: 700;
+}
+
+.f_font-800 {
+  font-weight: 800;
+}
+
+/* Box shadow
+-------------------------------------------*/
+.f_z-depth-0 {
+  box-shadow: none !important;
+}
+
+.f_z-depth-1 {
+  box-shadow: 0 2px 2px 0 rgba($box-shadow-color, 0.14), 
+              0 3px 1px -2px rgba($box-shadow-color, 0.12), 
+              0 1px 5px 0 rgba($box-shadow-color, 0.2);
+}
+
+.f_z-depth-2 {
+  box-shadow: 0 4px 5px 0 rgba($box-shadow-color, 0.14), 
+              0 1px 10px 0 rgba($box-shadow-color, 0.12), 
+              0 2px 4px -1px rgba($box-shadow-color, 0.3);
+}
+
+.f_z-depth-3 {
+  box-shadow: 0 8px 17px 2px rgba($box-shadow-color, 0.14), 
+              0 3px 14px 2px rgba($box-shadow-color, 0.12), 
+              0 5px 5px -3px rgba($box-shadow-color, 0.2);
+}
+
+.f_z-depth-4 {
+  box-shadow: 0 16px 24px 2px rgba($box-shadow-color, 0.14), 
+              0 6px 30px 5px rgba($box-shadow-color, 0.12), 
+              0 8px 10px -7px rgba($box-shadow-color, 0.2);
+}
+
+.f_z-depth-5 {
+  box-shadow: 0 24px 38px 3px rgba($box-shadow-color, 0.14), 
+              0 9px 46px 8px rgba($box-shadow-color, 0.12), 
+              0 11px 15px -7px rgba($box-shadow-color, 0.2);
+}
+
+/* Pulse animation
+-------------------------------------------*/
+.f_pulse {
+  @include f_pulse;
+}
+
+@keyframes f_pulse-animation {
+  0% {
+    opacity: 0.4;
+    transform: scale(1)
+  }
+
+  50% {
+    opacity: 0;
+    transform: scale(1.2)
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(1.3)
+  }
 }

@@ -11,7 +11,7 @@ $border-radius: 0.25rem !default;
 
 /* Modular typography ratios
 -------------------------------------------*/
-// MInor third 1.2
+// Minor third 1.2
 // Major Third: 1.25
 // Perfect Fourth 1.333
 // Augmented Fourth 1.414
@@ -45,7 +45,9 @@ $color-body: $color-dark !default;
 $link-color: #306BAC !default;
 $link-hover-color: #141B41 !default;
 
-$heading-color: $color-black !default;
+$body-color: #333 !default;
+$headings-color: $body-color !default;
+$box-shadow-color: #000 !default;
 
 // Color list
 // used for buttons and other color helpers

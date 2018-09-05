@@ -23,36 +23,41 @@
 .f_flex-columns {
   flex-direction: column;
 }
-
-.f_align-start {
+.f_align-items-start {
   align-items: flex-start;
 }
-.f_align-end {
+.f_align-items-end {
   align-items: flex-end;
 }
-.f_align-center {
+.f_align-items-center {
   align-items: center;
 }
-.f_align-stretch {
+.f_align-items-stretch {
   align-items: stretch;
 }
-.f_justify-start {
+.f_justify-content-start {
   justify-content: flex-start;
 }
-.f_justify-end {
+.f_justify-content-end {
   justify-content: flex-end;
 }
-.f_justify-between {
+.f_justify-content-between {
   justify-content: space-between;
 }
-.f_justify-around {
+.f_justify-content-around {
   justify-content: space-around;
 }
-.f_justify-center {
+.f_justify-content-center {
   justify-content: center;
 }
-.f_self-center {
+.f_align-self-center {
   align-self: center;
+}
+.f_align-self-start {
+  align-self: start;
+}
+.f_align-self-end {
+  align-self: start;
 }
 
 .f_flex-nowrap {
